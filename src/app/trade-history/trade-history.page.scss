@@ -1,0 +1,43 @@
+.currency-list {
+    padding: 20px;
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+
+  .grey-background {
+    background-color: var(--background-gray);
+    padding: 15px;
+  }
+
+  .currency-item {
+    // border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #ffffff;
+  }
+
+  .currency-item ion-label {
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .currency-item p {
+    margin: 5px 0;
+  }
+  .message-container {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #f4f5f8;
+    padding: 16px;
+  }
+  
+  .no-trades-message {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }

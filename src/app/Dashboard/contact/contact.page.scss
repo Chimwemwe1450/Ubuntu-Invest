@@ -1,0 +1,85 @@
+ion-content {
+  --background: var(--background-gray) !important;
+  --padding-top: 60px;
+}
+
+ion-card {
+  --box-shadow: none;  // Ionic uses CSS variables, so this will remove the shadow
+    box-shadow: none;
+    border-radius: 10px;
+    margin: 15px;
+
+}
+
+.contact-card {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.margin{
+    margin-bottom: 30px;
+  }
+  /* footer.component.scss */
+
+  ion-label {
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
+  }
+
+.contact-item {
+    margin-bottom: 1px; /* Adjust the margin to increase or decrease spacing */
+  }
+
+  .contact-label {
+    font-weight: bold; /* Optionally make the labels bold */
+    text-transform: uppercase;
+    font-size: 10px;
+    color: #B3B3B3;
+  }
+
+  .contact-info {
+    margin-top: 4px; /* Adjust the margin to control space between label and info */
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .name-row {
+    display: flex;
+    justify-content: space-between;  // Distribute the space between the child elements
+    width: 100%;
+    margin-bottom: 8px;
+
+    div {
+        flex: 1;  // This ensures that both divs take up equal width
+        margin: 0 10px;  // This gives a margin of 10px to the left and right of each div
+
+        label {
+            display: block;  // This ensures the label is above the input field
+            margin-bottom: 10px;  // Spacing between label and input field
+            font-weight: 500;
+        }
+
+        input {
+            width: 100%;  // Input takes the full width of its container
+        }
+    }
+  }
+
+  .contact-button {
+    --background: #1CB9C3;
+    --color: #FFFFFF;
+    width: 100%;
+    height: 40px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    justify-self: center;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+
+
+  }
+

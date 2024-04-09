@@ -1,0 +1,39 @@
+<ion-content [fullscreen]="true" class="white-background" [scrollEvents]="false">
+
+  <div class="header-image">
+    <img src="../../../assets/header-img.png" class="header-img" alt="Header Image">
+  </div>
+
+
+  <img src="assets/Ubuntu.png" class="auth-logo" alt="auth-logo">
+<br>
+  <div class="container">
+    <h1 class="black bold"> LOGIN</h1>
+    <br>
+    <!-- Begin form -->
+    
+          
+      <ion-input id="username" [(ngModel)]="username" label-placement="floating" fill="outline" label="Email" [style]="{'width':'90%'}"> </ion-input>
+      <br>
+      <br>
+      <div style="position: relative; width: 90%;">
+        <ion-icon [name]="passwordIcon" slot="end" style="position: absolute; right: 0; cursor: pointer;" (click)="togglePasswordVisibility()"></ion-icon>        
+        <ion-input [(ngModel)]="password" type="{{passwordFieldType}}" label-placement="floating" fill="outline" label="Password" [style]="{'width':'100%'}"> </ion-input>
+        <br>
+
+      </div>
+          
+      <br>
+      <span class="forgot-password" routerLink="/forget">Forgot password?</span>
+      <ion-button class="auth-button" (click)="verifyUser()" >Login</ion-button>
+      <br>
+      <br>
+      <span class="register-link" routerLink="/registration">Don't have an account?
+        <span class="register-link" routerLink="/registration">Register now</span>
+      </span>
+  
+    <div class="footer">
+      <img src="../../../assets/footer-img.png" class="bottom-image" alt="Bottom Image">
+    </div>
+  </div>
+</ion-content>

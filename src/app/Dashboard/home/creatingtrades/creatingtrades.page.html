@@ -1,0 +1,82 @@
+<ion-content>
+  <div class="grey-background">
+    <div class="white-background">
+      <h1 style="text-align: center;">Create a Trade</h1>
+
+      <br>
+
+      <ion-item lines="none">
+        <ion-col size="12">
+          <ion-select [(ngModel)]="selectedCurrencyId" (ionChange)="getCurrency()" label-placement="floating"
+            fill="outline" label="Select Currency">
+            <ion-select-option *ngFor="let currency of currencies" [value]="currency.id">{{ currency.name
+              }}</ion-select-option>
+          </ion-select>
+        </ion-col>
+      </ion-item>
+      <ion-item style="display: none;">
+        <ion-label position="floating">assetID</ion-label>
+        <ion-input type="text" [(ngModel)]="assetId"></ion-input>
+      </ion-item>
+      <br>
+
+      <ion-item [style]="{ 'width':'100%' }" lines="none">
+        <ion-col size="12">
+          <ion-input [(ngModel)]="takeProfit" name="takeProfit" label-placement="floating" fill="outline"
+            label="takeProfit"></ion-input>
+        </ion-col>
+      </ion-item>
+      <br>
+
+      <ion-item [style]="{ 'width':'100%' }" lines="none">
+        <ion-col size="12">
+          <ion-input [(ngModel)]="stopLoss" name="stopLoss" label-placement="floating" fill="outline"
+            label="stopLoss"></ion-input>
+        </ion-col>
+      </ion-item>
+      <br>
+
+      <ion-item lines="none">
+        <ion-col size="12">
+          <ion-select [(ngModel)]="position" name="position" label-placement="floating" fill="outline" label="Position">
+            <ion-select-option *ngFor="let currency of SelectPoistion" [value]="currency.name">{{ currency.name
+              }}</ion-select-option>
+          </ion-select>
+        </ion-col>
+      </ion-item>
+      <br>
+
+      <ion-item [style]="{ 'width':'100%' }" lines="none" style="display: none;">
+        <ion-col size="12">
+          <ion-input [(ngModel)]="isCurrency" name="isCurrency" label-placement="floating" fill="outline"
+            label="isCurrency"></ion-input>
+        </ion-col>
+      </ion-item>
+
+      <ion-item [style]="{ 'width':'100%' }" lines="none" style="display: none;">
+        <ion-col size="12">
+          <ion-input [(ngModel)]="leverage" name="leverage" label-placement="floating" fill="outline"
+            label="leverage"></ion-input>
+        </ion-col>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-col size="12">
+          <ion-select [(ngModel)]="type" name="currency" label-placement="floating" fill="outline" label="Type">
+            <ion-select-option *ngFor="let currency of  SelectType" [value]="currency.name">{{ currency.name
+              }}</ion-select-option>
+          </ion-select>
+        </ion-col>
+      </ion-item>
+      <br>
+
+      <div class="ion-text-center">
+        <ion-button class="auth-button2"
+          (click)="onCreateTrade(assetId, takeProfit, stopLoss, position, isCurrency, leverage, type)">
+          open Trade
+        </ion-button>
+
+      </div>
+    </div>
+  </div>
+</ion-content>

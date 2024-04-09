@@ -1,0 +1,73 @@
+<ion-menu side="end" content-id="main-content" swipeGesture="true" class="custom-menu">
+
+  <ion-content>
+    <ion-list class="profile-section" lines="none">
+      <ion-item>
+
+        <div class="avatar">
+          <!-- Replace with user profile image if available, otherwise display a default image -->
+          <img [src]="ImageStorage.getUserImage() || 'assets/icons8-user-100.png'" />
+        </div>
+        <ion-label class="heading-name">
+          {{ name }}
+    
+        </ion-label>
+      </ion-item>
+    </ion-list>
+    <!-- Profile Section -->
+
+    <div class="simple-divider"></div>
+    <!-- Trade Section -->
+    <ion-list-header style="color: orange; ">
+      <ion-icon name="wifi" style="font-size: 20px;"></ion-icon>
+      <span class="trade-text">Trade</span>
+    </ion-list-header>
+
+    <ion-list>
+      <ion-item (click)="selectItem('Forex')" [class.active]="selectedItem === 'Forex'" lines="none">Forex</ion-item>
+      <ion-item (click)="selectItem('Shares')" [class.active]="selectedItem === 'Shares'" lines="none">Futures</ion-item>
+      <ion-item (click)="selectItem('Indices')" [class.active]="selectedItem === 'Indices'"
+        lines="none">Indices</ion-item>
+   
+     
+      <ion-item (click)="selectItem('MT5 for desktop')" [class.active]="selectedItem === 'MT5 for desktop'"
+        lines="none">MT5 for WebTrader</ion-item>
+    
+    </ion-list>
+    <!-- Divider -->
+    <div class="simple-divider"></div>
+    <!-- Tools Section -->
+    <ion-list-header style="color: orange;">
+      <ion-icon name="hammer" style="font-size: 20px;"></ion-icon>
+      <span class="trade-text">Tools</span>
+    </ion-list-header>
+
+    <ion-list>
+      <ion-item (click)="selectItem('Economic calendar')" [class.active]="selectedItem === 'Economic calendar'"
+        lines="none">Economic calendar</ion-item>
+     
+
+    </ion-list>
+    <div class="simple-divider"></div>
+    <!-- Profile Section -->
+    <ion-list-header style="color: orange;">
+      <ion-icon name="person" style="font-size: 20px;"></ion-icon>
+      <span class="trade-text">Profile</span>
+
+    </ion-list-header>
+
+    <ion-list>
+      <ion-item (click)="selectItem('About Us')" [class.active]="selectedItem === 'About Us'" lines="none">About
+        Us</ion-item>
+      <ion-item (click)="selectItem('Contact Us')" [class.active]="selectedItem === 'Contact Us'" lines="none">
+        Contact Us
+      </ion-item>
+      <ion-item (click)="selectItem('Logout')" [class.active]="selectedItem === 'Logout'" lines="none">Logout</ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-content id="main-content">
+  <!-- Your main content here -->
+</ion-content>

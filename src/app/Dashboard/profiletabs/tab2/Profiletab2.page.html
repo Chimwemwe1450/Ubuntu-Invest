@@ -1,0 +1,78 @@
+<ion-content>
+  <form #userForm="ngForm">
+    <div class="screen-container">
+      <div class="screen-padding">
+        <!-- Card with Name, Account Number, and Icon -->
+        <ion-card>
+          <ion-card-content>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <p class="id-heading">Name:</p>
+                  <p class="id-value">{{ name }}</p>
+                  <p class="id-heading">Surname:</p>
+                  <p class="id-value">{{ surname }}</p>
+                  <br>
+                  <p class="id-heading">Account Number:</p>
+                  <p class="id-value">{{ userID }}</p>
+                </ion-col>
+                <ion-col class="ion-text-right">
+                  <ion-icon name="person-circle" class="large-icon"></ion-icon>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Input Fields -->
+        <ion-card>
+          <ion-card-content>
+            <ion-item [style]="{ 'width':'100%' }" lines="none">
+              <ion-col size="12">
+                <ion-input [(ngModel)]="firstname" name="firstname" label-placement="floating" fill="outline"
+                  label="Name" placeholder="{{ name }}" required></ion-input>
+              </ion-col>
+            </ion-item>
+            <br>
+            <ion-item [style]="{ 'width':'100%' }" lines="none">
+              <ion-col size="12">
+                <ion-input [(ngModel)]="lastname" name="lastname" label-placement="floating" fill="outline"
+                  label="Surname" placeholder="{{ surname }}" required></ion-input>
+              </ion-col>
+            </ion-item>
+
+            <ion-item [style]="{ 'width':'100%' }" lines="none">
+              <ion-col>
+                <ion-col size="12">
+                  <ion-select [(ngModel)]="currency" name="currency" label-placement="floating" fill="outline"
+                    label="Currency" placeholder="{{ currencyID }}" label-placement="stacked">
+                    <ion-select-option *ngFor="let country of currencyGroup" [value]="country.code">{{ country.name
+                      }}</ion-select-option>
+                  </ion-select>
+                </ion-col>
+                <ion-col size="12">
+                  <ion-select [(ngModel)]="country" name="country" label-placement="floating" fill="outline"
+                    label="Country" placeholder="{{ countryID }}" label-placement="stacked">
+                    <ion-select-option *ngFor="let country of countries" [value]="country.code">{{ country.name
+                      }}</ion-select-option>
+                  </ion-select>
+                </ion-col>
+              </ion-col>
+            </ion-item>
+            <ion-button class="custom-button-color" [disabled]="!userForm.valid" (click)="EditUser()">Submit
+              Update</ion-button>
+          </ion-card-content>
+        </ion-card>
+
+
+
+      </div>
+    </div>
+  </form>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</ion-content>

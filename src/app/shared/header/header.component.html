@@ -1,0 +1,20 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar id="header">
+    <div id="header-content">
+      <h1 class="white-background" *ngIf="isHomePage">Home </h1>
+      <h1 class="white-background"> {{ pageTitle }} </h1>
+      <!-- Logo at the start -->
+      <ion-buttons slot="start">
+        <div class="header-logo logo-image">
+          <img src="assets/img-logo.png" class="logo" alt="Logo">
+        </div>
+      </ion-buttons>
+
+
+      <!-- Icons at the end -->
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </div>
+  </ion-toolbar>
+</ion-header>

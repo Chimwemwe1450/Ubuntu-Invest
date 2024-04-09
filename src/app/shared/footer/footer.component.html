@@ -1,0 +1,41 @@
+<ion-footer>
+  <ion-toolbar class="footer-nav">
+    <div id="footer">
+      
+      <div  [class.my-custom-icon-color]="isCurrentRoute('/home')"
+      [class.my-custom-icon-color1]="isCurrentRoute('/home/tab1')"  
+      [class.my-custom-icon-color2]="isCurrentRoute('/home/tab2')"
+      [class.my-custom-icon-color3]="isCurrentRoute('/home/tab3')"
+      [class.my-custom-icon-color3]="isCurrentRoute('/home/tab4')" class="nav-item">
+        <ion-icon size="large" name="home" (click)="navigate('/home/tab1')"></ion-icon>
+        <ion-label>Dashboard</ion-label>
+      </div>
+      <div  [class.my-custom-icon-color]="isCurrentRoute('/trading')"
+      [class.my-custom-icon-color1]="isCurrentRoute('/trading/tab1')"  
+      [class.my-custom-icon-color2]="isCurrentRoute('/trading/tab2')"
+      [class.my-custom-icon-color3]="isCurrentRoute('/trading/tab3')" class="nav-item">
+             
+        <ion-icon [class.my-custom-icon-color]="isCurrentRoute('/trading')" size="large" name="stats-chart" (click)="navigate('/trading')"></ion-icon>
+        <ion-label>Trading</ion-label>
+      </div>
+      <div [class.my-custom-icon-color]="isCurrentRoute('/trade-history')"class="nav-item">
+        <ion-icon [class.my-custom-icon-color]="isCurrentRoute('/trade-history')" size="large" name="reader" (click)="navigate('/trade-history')"></ion-icon>
+        <ion-label>MyHistory </ion-label>
+      </div>
+      <div [class.my-custom-icon-color]="isCurrentRoute('/tools')" 
+      [class.my-custom-icon-color]="isCurrentRoute('/tools/tab2')"class="nav-item">
+        <ion-icon [class.my-custom-icon-color]="isCurrentRoute('/tools')" size="large" name="hammer" (click)="navigate('/tools')"></ion-icon>
+        <ion-label>Tools</ion-label>
+      </div>
+      
+      <div [class.my-custom-icon-color]="isCurrentRoute('/profile')"
+      [class.my-custom-icon-color1]="isCurrentRoute('/profile/tab2')"
+      [class.my-custom-icon-color2]="isCurrentRoute('/profile/tab1')" class="nav-item">
+        <ion-icon [class.my-custom-icon-color]="isCurrentRoute('/profile')" size="large" name="person" (click)="navigate('/profile')"></ion-icon>
+        <ion-label>Profile</ion-label>
+      </div>
+      
+    </div>
+  </ion-toolbar>
+</ion-footer>
+

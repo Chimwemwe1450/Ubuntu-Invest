@@ -1,0 +1,365 @@
+
+.custom-tabs {
+    margin-top: 65px; /* Adjust this value as needed */
+
+}
+.custom-tabs ion-tab-button {
+    --color: rgb(27, 27, 26);            /* Color for inactive tabs */
+    --color-selected: rgb(236, 162, 2);   /* Color for the active tab */
+  }
+  .custom-tabs ion-tab-bar {
+    --background: #fdfbfb;  /* Example light gray background */
+  }
+.screen-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .avatar-container {
+    text-align: center;
+    color: var(--white);
+    background: var(--background-secondary);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  #upload-icon {
+    position: relative;
+  }
+
+  input[type="file"] {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+  #profile-pic {
+    width: 100%;
+    height: 100%;
+  }
+
+  .accordion-items {
+    --background: var(--background-secondary);
+    color: var(--heading-text);
+    --border-width: 0;
+  }
+
+  .input-label {
+    color: var(--background-tertiary);
+  }
+
+  .ion-input {
+    color: var(--color-four);
+  }
+
+  .input-expand-block {
+    background: var(--ion-color-primary);
+    color: var(--header);
+    border-radius: 0 0 10px 10px;
+  }
+
+  .editing-background {
+    border-radius: 3px 3px 0 0;
+  }
+
+  ion-accordion {
+    background: none;
+  }
+
+  #profile-summary {
+    color: var(--ion-color-secondary);
+    margin-left: 5px;
+  }
+
+  #acc-number {
+    margin-top: 10px;
+  }
+
+  .text-block {
+    display: block;
+    padding: 15px 20px;
+  }
+
+  #upload-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .fileUpload {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .fileUpload ion-input.upload {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  //--//
+
+  .edit-input-item {
+    padding-right: 20px;
+  }
+
+  ion-tab-bar {
+    background: var(--global-background);
+      border: none;
+  }
+
+
+
+
+  /* home.page.scss */
+
+ion-card {
+  background-color: var(--background-gray); // Light gray
+  --box-shadow: none;  // Ionic uses CSS variables, so this will remove the shadow
+    box-shadow: none;    // This is for additional assurance
+    .white-background {
+      --background: var(--white)fff;  // This sets the background for ion-content
+    }
+
+  ion-card-content {
+      h2 {
+        color: var(--primary-orange); // Dark text color
+        font-size: 24px;
+      }
+
+      p {
+          color: #777; // Lighter text color
+      }
+  }
+}
+html, body, ion-content {
+  height: 100%;
+}
+ion-content .grey-background {
+  min-height: 100% !important;
+}
+.grey-background {
+  background-color: var(--background-gray);
+  height: 150%;      // This ensures it takes the full height
+  min-height: 150vh; // This ensures it takes at least the full viewport height
+  box-sizing: border-box;
+}
+.screen-padding {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+@media (max-width: 540px) {
+  .grey-background {
+      padding-top: 5px;
+      padding-bottom: 12;
+  // decrease the height by the padding amount
+  }
+}
+ion-content {
+  overflow-y: auto;
+}
+.login-button {
+  --background: var(--primary-blue);
+  --color: var(--white)FFF;
+  width: 175px;
+  height: 40px;
+  margin-bottom: 1px;
+}
+
+ion-segment {
+  border: none;
+  --background: transparent;
+
+  ion-segment-button {
+    --color: var(--primary-orange); // Non-active text color
+    --color-checked: var(--primary-orange); // Active text color
+    --background-checked: white; // Background color for active state
+    margin: 0 5px;
+  }
+}
+.custom-list {
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  .custom-item {
+    --background: var(--background-gray); // Light gray background
+    --border-width: 0; // Remove default border
+    --padding-start: 16px; // Adjust padding if needed
+    --padding-end: 16px;
+    border-bottom: 1px solid #e0e0e0; // Add a light border at the bottom of each item
+  }
+
+  .custom-item:last-child {
+    border-bottom: none; // Remove border from the last item
+  }
+}
+
+.bigger-card {
+  width: 80px;       // Adjust the width as per your requirement
+  height: 30px;      // Adjust the height as per your requirement
+  padding: 2px;
+
+  display: flex;               // Use flexbox for layout
+  justify-content: center;    // Center content horizontally
+  align-items: center;   // Increase padding if needed
+}
+.custom-tabs {
+    margin-top: 65px; /* Adjust this value as needed */
+
+}
+.custom-tabs {
+  margin-top: 180px;
+  font-size: 18px !important;
+
+}
+.custom-tabs ion-tab-button {
+  --color: #808080 ;
+  --color-selected: var(--primary-orange);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  --font-size: 12px !important;
+  --text-transform: uppercase;
+}
+.custom-tabs ion-tab-bar {
+  --background: #ffffff;
+}
+
+.screen-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .avatar-container {
+    text-align: center;
+    color: var(--white);
+    background: var(--background-secondary);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  #upload-icon {
+    position: relative;
+  }
+
+  input[type="file"] {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+  #profile-pic {
+    width: 100%;
+    height: 100%;
+  }
+
+  .accordion-items {
+    --background: var(--background-secondary);
+    color: var(--heading-text);
+    --border-width: 0;
+  }
+
+  .input-label {
+    color: var(--background-tertiary);
+  }
+
+  .ion-input {
+    color: var(--color-four);
+  }
+
+  .input-expand-block {
+    background: var(--ion-color-primary);
+    color: var(--header);
+    border-radius: 0 0 10px 10px;
+  }
+
+  .editing-background {
+    border-radius: 3px 3px 0 0;
+  }
+
+  ion-accordion {
+    background: none;
+  }
+
+  #profile-summary {
+    color: var(--ion-color-secondary);
+    margin-left: 5px;
+  }
+
+  #acc-number {
+    margin-top: 10px;
+  }
+
+  .text-block {
+    display: block;
+    padding: 15px 20px;
+  }
+
+  #upload-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .fileUpload {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .fileUpload ion-input.upload {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  //--//
+
+  .edit-input-item {
+    padding-right: 20px;
+  }
+
+  ion-tab-bar {
+    background: var(--global-background);
+      border: none;
+  }
+
+
+
+  .custom-tabs {
+    margin-top: 65px; /* Adjust this value as needed */
+
+}
+ion-card{
+  margin-top: 5px;
+}

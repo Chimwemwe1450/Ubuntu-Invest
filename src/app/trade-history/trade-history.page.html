@@ -1,0 +1,30 @@
+<ion-content [fullscreen]="true">
+  <br>
+  <br>
+  <br>
+  <div class="grey-background">
+
+    <ng-container *ngIf="currencies && currencies.length > 0">
+      <ion-item class="currency-item" *ngFor="let currency of currencies">
+        <ion-label>
+          <p>ID: <span class="bold"> {{ currency.id }}</span></p>
+          <p>Asset Name: <span class="bold"> {{ currency.assetName }}</span></p>
+          <p>Position: <span class="bold"> {{ currency.position }}</span></p>
+          <p>Amount: <span class="bold">{{ currency.amount }}</span></p>
+          <p>Type: <span class="bold">{{ currency.name }}</span></p>
+          <p>Status: <span class="bold">{{ currency.status }}</span></p>
+        </ion-label>
+      </ion-item>
+    </ng-container>
+
+    <ion-item *ngIf="!currencies || currencies.length === 0">
+      <ion-label>Please open a trade.</ion-label>
+    </ion-item>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</ion-content>

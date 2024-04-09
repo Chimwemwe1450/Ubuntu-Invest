@@ -1,0 +1,48 @@
+<ion-content>
+  <div class="header-image">
+    <img src="../../../assets/header-img.png" class="header-img" alt="Header Image">
+  </div>
+
+
+  <img src="assets/Ubuntu.png" class="auth-logo" alt="auth-logo">
+  <div style="display: flex; height: 60%; align-items: center; justify-content: center;">
+    <div style="width: 100%; max-width: 600px;"> 
+      <ion-grid class="ion-align-items-center ion-justify-content-center">
+        <ion-row>
+          <ion-col size-md="6" size-lg="5" size-xs="12">
+            <form [formGroup]="riskForm" (ngSubmit)="submit()">
+              <ion-card>
+                <ion-card-header>
+                  <h1 >Risk assessment</h1>
+                  <ion-card-title>Why do you want to trade?</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                  <ion-item>
+                    <ion-select formControlName="question5">
+                      <ion-select-option *ngFor="let option of question5Options" [value]="option">
+                        {{ option.freeAnswer }}
+                      </ion-select-option>
+                    </ion-select>
+                  </ion-item>
+                </ion-card-content>
+              </ion-card>
+            
+            </form>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+  <ion-row>
+    <ion-col size="6">
+      <ion-button class = "auth-button1" expand="full" (click)="NavigateHomePage()">Continue later</ion-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button   class = "auth-button2" expand="full" (click)="submit()" [disabled]="!riskForm.valid">Next</ion-button>
+    </ion-col>
+  </ion-row>
+  <div class="footer">
+    <img src="../../../assets/footer-img.png" class="bottom-image" alt="Bottom Image">
+  </div>
+</ion-content>
+

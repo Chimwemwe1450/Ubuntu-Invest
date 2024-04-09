@@ -1,0 +1,45 @@
+<ion-content [fullscreen]="true" class="white-background">
+
+  <div class="header-image">
+    <img src="../../../assets/header-img.png" class="header-img" alt="Header Image">
+  </div>
+
+  <img src="assets/Ubuntu.png" class="auth-logo" alt="auth-logo">
+
+  <div class="container">
+    <h1 class="black bold"> FORGOT PASSWORD</h1>
+
+    <br>
+    <ion-text class="paragraph">
+      Enter your email to reset your
+    </ion-text>   
+     <ion-text class="paragraph">
+     Password
+    </ion-text>
+   
+    <br>
+
+    <!-- Begin form -->
+    <ion-input id="username" [(ngModel)]="username" label-placement="stacked" fill="outline" label="Email" [style]="{'width':'90%'}"> </ion-input>
+      <br> 
+      <ion-button class="auth-button"  (click)="makeRequest()">RESET PASSWORD</ion-button>
+      <br>
+      <br>
+      <div *ngIf="showMessage" class="message">
+  {{ message }}
+</div>
+<ion-text routerLink="/login" class="login-link">
+  Back to Login
+</ion-text>
+     
+
+
+    <!-- End form -->
+
+    <div class="footer">
+      <img src="../../../assets/footer-img.png" class="bottom-image" alt="Bottom Image">
+    </div>
+
+  </div>
+
+</ion-content>

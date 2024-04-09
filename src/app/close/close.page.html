@@ -1,0 +1,14 @@
+<ion-content [fullscreen]="true">
+
+  <div class="grey-background">
+    <div class="white-background">
+      <p> Enter your Trade ID from MyHistory </p>
+
+      <br>
+      <ion-input [(ngModel)]="close" label-placement="floating " fill="outline" label="Enter Close Trade ID ">
+      </ion-input>
+      <br>
+      <ion-button class="auth-button1" (click)="CloseTrades(close)"> close trade </ion-button>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,51 @@
+ion-content {
+  --background: var(--background-gray) !important;
+}
+
+ion-card {
+  --box-shadow: none;
+    box-shadow: none;
+    border-radius: 10px;
+    margin: 15px;
+--padding: 5px !important;
+}
+
+ion-input {
+  --padding-start: 16px !important;
+}
+
+ion-select {
+  font-family: "Montserrat";
+}
+
+ion-button {
+  --background: #1CB9C3;
+  --color: #FFFFFF;
+  height: 40px;
+  width: 100%;
+  --border-radius: 7px ;
+  --box-shadow: none !important;
+}
+
+
+.id-heading {
+  font-weight: 500;
+  color: #808080 !important;
+  font-size: 13px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.id-value {
+  color: black !important;
+  font-weight: 600;
+}
+
+.img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+.large-icon {
+    font-size: 100px;  /* or whatever size you desire */
+}

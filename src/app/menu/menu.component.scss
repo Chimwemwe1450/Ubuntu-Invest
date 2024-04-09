@@ -1,0 +1,73 @@
+ion-item {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+
+.heading-name {
+  font-weight: bold;
+  font-size: 22px;
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 10px;
+}
+
+ion-list {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.custom-menu {
+
+.avatar img {
+  width: 70px;  /* Adjust as needed */
+  height:70px;  /* Adjust as needed */
+  border-radius: 50%;  /* This makes the image circular */
+  margin-right: 15px;  /* Space between the image and the label */
+  object-fit: cover;  /* This ensures the image covers the container fully */
+  display: block;  /* Removes any default alignment issues */
+  margin-top: 10px;
+}
+
+.bold-label {
+  font-weight: bold;
+  font-size: 1.5em;  /* Adjust as needed */
+}
+.profile-section {
+  margin-bottom: 20px;  /* Adjust as needed */
+}
+  .section-header {
+      color: var(--primary-orange);  // Use the exact color from the mock-up
+
+      // padding: 10px 15px;
+  }
+
+  .trade-section,
+  .tools-section,
+  .profile-actions {
+      ion-item {
+
+          padding: 10px 15px;
+          // Other styles for the list items
+      }
+  }
+}
+ion-item.active {
+  --ion-item-background: #E8F8F9;
+  --ion-background-color: #E8F8F9;
+  --ion-color-step: 900;  // This will darken the text when active
+  color: var(--primary-blue);  // This is the text color when the item is active or highlighted
+}
+.simple-divider {
+  height: 1px;
+  background-color: #d9d9d9;
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+.trade-text {
+  font-size: 18px;
+  margin-left: 5px;
+  margin-top: 3px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+
+}

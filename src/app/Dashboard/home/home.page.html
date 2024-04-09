@@ -1,0 +1,96 @@
+<!-- home.page.html -->
+
+<ion-content>
+  <h1>default</h1>
+  <!-- Trading Account Card -->
+
+  <ion-card>
+    <ion-card-content>
+      <p class="wallet-heading">Wallet Balance:</p>
+      <h2 class="wallet-balance">{{totalBalance}} {{currency}}</h2>
+      <ion-grid>
+        <ion-row>
+
+          <ion-col><ion-button class="auth-button1" (click)="NavigateUserTrading()">Trading</ion-button></ion-col>
+          <ion-col><ion-button class="auth-button1" (click)="NavigateUserToolsPage()">Tools</ion-button></ion-col>
+          <ion-col><ion-button class="auth-button1" (click)="NavigateUserAboutusPage()">About Us</ion-button></ion-col>
+
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+  <ion-tabs class="custom-tabs" style="margin-top:230px;">
+    <ion-tab-bar slot="top">
+      <ion-tab-button tab="tab1">
+        <ion-label>Currencies</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="tab2">
+        <ion-label>Commodities</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="tab3">
+        <ion-label>Indices</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="tab4">
+        <ion-label>Close</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>
+<div>
+
+  <ion-fab class="custom-fab" vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button id="open-custom-dialog-home" class="custom-fab1">
+      <ion-icon name="card-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-modal id="example-modal" #modal trigger="open-custom-dialog-home">
+    <ng-template>
+      <div class="wrapper">
+
+        <h1>Deposit</h1>
+        <div class="container2">
+          <br>
+
+
+          <ion-item [style]="{'width':'100%'}" lines="none">
+
+            <ion-col size="12 ">
+
+              <br>
+              <ion-select [(ngModel)]="selectedGateway" (ionChange)="onGatewaySelectionChange()"
+                label-placement="floating" fill="outline" label="Gateway">
+                <ion-select-option *ngFor="let gateway of PaymentGateAway" [value]="gateway.valueGateAway">
+                  {{ gateway.labelGateAway }}
+                </ion-select-option>
+              </ion-select>
+            </ion-col>
+          </ion-item>
+          <br>
+
+
+          <br>
+          <ion-item [style]="{'width':'100%'}" lines="none">
+
+            <ion-col size="12 ">
+              <ion-input [(ngModel)]="amountDeposit" name="amountWithDrawal" label-placement="floating" fill="outline"
+                label="Amount"></ion-input>
+
+            </ion-col>
+          </ion-item>
+          <br>
+        </div>
+        <br>
+        <div class="container1">
+          <ion-button class="auth-button2" expand="block" (click)="onGatewaySelectionChange()">Proceed with
+            Payment</ion-button>
+
+          <br>
+          <br>
+        </div>
+
+      </div>
+    </ng-template>
+  </ion-modal>
+</div>

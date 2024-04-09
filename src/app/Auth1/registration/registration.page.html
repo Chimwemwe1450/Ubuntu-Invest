@@ -1,0 +1,81 @@
+<ion-content class="white-background">
+  <div class="header-image">
+    <img src="../../../assets/header-img.png" class="header-img" alt="Header Image">
+  </div>
+
+  <img src="assets/Ubuntu.png" class="auth-logo" alt="auth-logo">
+
+  <div class="container">
+    <br>
+    <h1 class="black bold">REGISTER</h1>
+    <br>
+
+    <form [formGroup]="userForm">
+      <ion-item lines="none">
+        <ion-col size="6">
+          <ion-input  formControlName="firstName" label="First Name" label-placement="floating" fill="outline"></ion-input>
+        </ion-col> 
+        <ion-col size="6">
+          <ion-input  formControlName="lastName" label="Last Name" label-placement="floating" fill="outline"></ion-input>
+        </ion-col>
+      </ion-item>
+      <br>
+
+      <ion-item lines="none">
+        <ion-col size="12">
+          <ion-input   formControlName="email" label="Email" label-placement="floating" fill="outline"></ion-input>
+        </ion-col>
+      </ion-item>
+
+      <br>
+
+      <ion-item lines="none">
+        <ion-col size="12">
+  
+            <ion-input   formControlName="plainPassword" type="{{passwordFieldType}}"  label-placement="floating" fill="outline" label="Password"  [style]="{'width':'100%'}"></ion-input>
+            
+       
+        </ion-col>
+      </ion-item>
+
+      <br>
+
+      <ion-item lines="none">
+        <ion-col size="6">
+          <ion-select formControlName="currency"  label-placement="floating" label="Currency" fill="outline"  >
+            <ion-select-option *ngFor="let country of currency" [value]="country.code">
+              {{ country.name }}
+            </ion-select-option>
+          </ion-select>
+        </ion-col>
+
+        <ion-col size="6">
+          
+          <ion-select formControlName="country" label-placement="floating" label="Country" fill="outline" >
+            <ion-select-option *ngFor="let country of countries" [value]="country.code">
+              
+              {{ country.name }}
+            </ion-select-option>
+          </ion-select>
+        </ion-col>
+      </ion-item>
+
+      <br>
+
+
+      <ion-item lines="none">
+        <ion-col size="6">
+          <ion-input  formControlName="areaPhone" label="Code" label-placement="floating" fill="outline"   ></ion-input>
+        </ion-col> 
+        <ion-col size="6">
+          <ion-input   formControlName="phone" label="phone" label-placement="floating" fill="outline"></ion-input>
+        </ion-col>
+      </ion-item>
+  
+      
+    </form>
+    <ion-button class="auth-button" (click)="onSubmit()">Register</ion-button>
+
+    <span class="login-link">Already have an account? <span class="login-link" routerLink="/login">Login</span></span>
+  </div>
+</ion-content>

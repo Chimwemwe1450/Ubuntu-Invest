@@ -1,0 +1,31 @@
+/* home.page.scss */
+
+  html, body, ion-content {
+    height: 100%;
+  }
+  ion-content .grey-background {
+    min-height: 100% !important;
+  }
+  .grey-background {
+    background-color: var(--background-gray);
+  padding: 10px;
+  padding-top: 10px !important;
+  }
+
+  .white-background {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+  }
+  .screen-padding {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+
+  @media (max-width: 540px) {
+    .grey-background {
+        padding-top: 5px;
+        padding-bottom: 12;
+    // decrease the height by the padding amount
+    }
+  }

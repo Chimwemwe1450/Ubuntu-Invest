@@ -1,0 +1,64 @@
+<ion-content>
+  <div class="screen-container">
+    <div class="screen-padding">
+      <br>
+      <!-- Conditionally display the card if the checklist is not fully completed -->
+      <ion-card *ngIf="!isCompleted">
+        <ion-card-header>
+          <ion-card-title>Profile Completion</ion-card-title>
+        </ion-card-header>
+        <div class="progress-container">
+          <ion-progress-bar [value]="getCompletionPercentage() / 100"></ion-progress-bar>
+        </div>
+        <p class="completion-percentage-text">{{ getCompletionPercentage() }}% Completed</p>
+        <ion-card-content>
+          <ion-list>
+            <ion-item *ngFor="let item of checklist; let i = index">
+              <ion-label>{{ item.label }}</ion-label>
+              <ion-checkbox slot="end" [checked]="item.completed" (ionChange)="toggleCompletion(i)"
+                [disabled]="true"></ion-checkbox>
+            </ion-item>
+          </ion-list>
+          <br>
+
+          <!-- <ion-button class="auth-button1" *ngIf="!isCompleted" expand="full"
+            (click)="findFirstIncompleteSection() && navigateToSection(findFirstIncompleteSection())">Complete
+            Profile</ion-button> -->
+
+          <ion-button *ngIf="!isCompleted"
+            (click)="findFirstIncompleteSection() && navigateToSection(findFirstIncompleteSection())">Complete
+            Profile</ion-button>
+
+          <br>
+
+          <br>
+
+          <p><ion-text color="medium">NOTE: Withdrawal functionality may be limited if this process is not
+              completed.</ion-text></p>
+
+        </ion-card-content>
+      </ion-card>
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+
+
+      <div *ngIf="isCompleted || isCompletedMessageDisplayed" class="completed-message">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Profile Completed</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Congratulations! Your profile is now 100% complete.
+          </ion-card-content>
+        </ion-card>
+      </div>
+      <br>
+    </div>
+  </div>
+</ion-content>

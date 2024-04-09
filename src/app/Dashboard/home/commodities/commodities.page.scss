@@ -1,0 +1,55 @@
+.trade-form {
+    padding: 20px;
+  }
+
+  .input-field {
+    margin-bottom: 15px;
+  }
+
+  ion-card {
+    --box-shadow: none;
+      box-shadow: none;
+      border-radius: 10px;
+  --padding: 5px !important;
+  }
+
+  ion-input {
+    --padding-start: 16px !important;
+  }
+
+  ion-select {
+    font-family: "Montserrat";
+  }
+
+  .grey-background {
+    background-color: var(--background-gray);
+    padding: 15px;
+  }
+
+  .white-background {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .create-button {
+    margin-top: 20px;
+  }
+  .auth-button2 {
+    --background: #1CB9C3;
+    --color: #FFFFFF;
+    height: 40px;
+    width: 100%;
+    --border-radius: 7px;
+    --box-shadow: none !important;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .ion-col-center {
+    display: flex;
+    justify-content: center;
+  }
+  .ion-col-center {
+    display: flex;
+    justify-content: center;
+  }

@@ -1,0 +1,7 @@
+{
+  "name": "Mobile-ubuntu-invest",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

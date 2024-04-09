@@ -1,0 +1,173 @@
+<!-- home.page.html -->
+
+<ion-content>
+  <!-- Trading Account Card -->
+
+  <h1 class="margin">default</h1>
+  <ion-card>
+    <ion-card-content style="display: flex; justify-content: space-between; align-items: flex-end;">
+
+      <div class="container">
+        <!-- Name and Account Number on top -->
+        <div>
+          <p class="id-heading">User ID:</p>
+          <p class="id-value">{{userID}}</p>
+
+
+        </div>
+
+        <!-- Balance at the bottom -->
+        <p class="id-heading">Wallet Balance:</p>
+        <h2 class="wallet-balance">{{ totalBalance }} {{currency}}</h2>
+
+      </div>
+      <div class="button-container">
+        <ion-button id="open-custom-dialog" class="deposit-button" expand="block">Deposit</ion-button>
+
+        <ion-button id="open-custom-dialog1" expand="block" class="withdraw-button">Withdrawal</ion-button>
+      </div>
+
+
+      <!---  Deposit -->
+      <ion-modal id="example-modal" #modal trigger="open-custom-dialog">
+        <ng-template>
+          <div class="wrapper">
+
+            <h1>Deposit</h1>
+            <div class="container2">
+              <br>
+
+
+              <ion-item [style]="{'width':'100%'}" lines="none">
+
+                <ion-col size="12 ">
+
+                  <br>
+                  <ion-select [(ngModel)]="selectedGateway" (ionChange)="onGatewaySelectionChange()"
+                    label-placement="floating" fill="outline" label="Gateway">
+                    <ion-select-option *ngFor="let gateway of PaymentGateAway" [value]="gateway.valueGateAway">
+                      {{ gateway.labelGateAway }}
+                    </ion-select-option>
+                  </ion-select>
+                </ion-col>
+              </ion-item>
+              <br>
+
+        
+      
+              <ion-item [style]="{'width':'100%'}" lines="none">
+
+                <ion-col size="12 ">
+                  <ion-input [(ngModel)]="amountDeposit" name="amountWithDrawal" label-placement="floating"
+                    fill="outline" label="Amount"></ion-input>
+
+                </ion-col>
+              </ion-item>
+              <br>
+            </div>
+            <br>
+            <div class="container1">
+              <ion-button class="auth-button1" expand="block" (click)="onGatewaySelectionChange()">Proceed with
+                Payment</ion-button>
+
+              <br>
+              <br>
+            </div>
+
+          </div>
+        </ng-template>
+      </ion-modal>
+      <!---  WithDrawal -->
+      <ion-modal id="example-modal" #modal trigger="open-custom-dialog1">
+        <ng-template>
+          <div class="wrapper">
+
+
+            <div class="ion-text-center">
+              <h1>Withdraw</h1>
+            </div>
+            <div class="container2">
+              <br>
+              <div class="ion-padding">
+                <ion-grid>
+                  <ion-row>
+                    <!-- First set of ion-item elements -->
+                    <ion-col size="12" size-md="6">
+                      <ion-item lines="none">
+                        <ion-col size="4">
+                          <ion-select [(ngModel)]="currencyWithDrawal" label-placement="floating" fill="outline"
+                                      label="Currency" label-placement="stacked">
+                            <ion-select-option *ngFor="let country of countries" [value]="country.code">{{ country.name }}</ion-select-option>
+                          </ion-select>
+                        </ion-col>
+              
+                        <ion-col size="8">
+                          <ion-input [(ngModel)]="amountWithDrawal" name="amountWithDrawal" label-placement="stacked"
+                                    fill="outline" label="Amount" class="custom-input"></ion-input>
+                        </ion-col>
+                      </ion-item>
+                    </ion-col>
+              
+                    <!-- Second set of ion-item elements -->
+                    <ion-col size="12" size-md="6">
+                      <ion-item lines="none">
+                        <ion-col size="12">
+                          <ion-select [(ngModel)]="selectedBank" label-placement="floating" fill="outline" label="Type"
+                                      label-placement="stacked">
+                            <ion-select-option *ngFor="let bank of Bank" [value]="bank.code">{{ bank.name }}</ion-select-option>
+                          </ion-select>
+                        </ion-col>
+                      </ion-item>
+                    </ion-col>
+                  </ion-row>
+                  <br>
+                  <!-- Third set of ion-item elements -->
+                  <ion-row>
+                    <ion-col size="12" size-md="6">
+                      <ion-item lines="none">
+                        <ion-col size="12">
+                          <ion-input [(ngModel)]="statusDetails" name="statusDetails" label-placement="stacked" fill="outline"
+                                    [label]="getInputLabel(selectedBank)" class="custom-input"></ion-input>
+                        </ion-col>
+                      </ion-item>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </div>
+              
+              <br>
+            </div>
+           
+            <div class="container1">
+              <ion-button class="auth-button2" [disabled]="!isChecklistCompleted() || !isValidWithdrawal()"
+              (click)="submitFormWithDrawal(amountWithDrawal, currencyWithDrawal, statusDetails, type)">
+    Submit Withdrawal
+  </ion-button>
+              <br>
+              <br>
+            </div>
+
+          </div>
+        </ng-template>
+      </ion-modal>
+
+    </ion-card-content>
+  </ion-card>
+  <ion-tabs class="custom-tabs">
+    <ion-tab-bar slot="top">
+      <ion-tab-button tab="tab1">
+        <ion-label>Forex</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="tab2">
+        <ion-label>Futures</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="tab3">
+        <ion-label>Indices</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+
+
+
+</ion-content>

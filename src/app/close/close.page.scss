@@ -1,0 +1,33 @@
+.auth-button1 {
+  --background: #1CB9C3;
+  --color: #FFFFFF;
+  height: 40px;
+  width: 100%;
+  --border-radius: 7px;
+  --box-shadow: none !important;
+  font-family: 'Montserrat', sans-serif;
+  }
+  ion-content {
+    background-color: var(--background-gray) !important;
+
+  }
+
+  ion-input {
+    --padding-start: 16px !important;
+    font-size: 16px;
+  }
+
+  ion-select {
+    font-family: "Montserrat";
+  }
+
+  .grey-background {
+    background-color: var(--background-gray);
+    padding: 15px;
+  }
+
+  .white-background {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 10px;
+  }

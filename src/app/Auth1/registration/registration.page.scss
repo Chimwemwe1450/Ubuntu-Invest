@@ -1,0 +1,93 @@
+//  Register  page
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    ion-checkbox {
+        --border-radius: 50%; 
+      }
+  .login-link {
+    color: var(--primary-orange);
+    text-align: right;
+    text-decoration: underline;
+    display: block;
+    width: 90%;
+    margin: 0 auto 15px auto;
+    font-family: Montserrat;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+
+  }
+  .money{
+
+    height: 10%;
+  }
+        .checkbox-container {
+            position: relative;
+            width: 90%;
+            height: 40px;  
+            padding: 3%;
+            p-checkbox {
+                margin-right: 10px;  
+            }
+            .flex {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);  
+                &.left {
+                    left: 0;
+                }
+
+                &.right {
+                    right: 0;
+                }
+            }
+        }
+        .bold-label {
+            font-weight: bold;
+          }
+    .name-row1 {
+        display: flex;
+        justify-content: space-between;  // Distribute the space between the child elements
+        width: 100%;
+
+        div {
+            flex: 1;  // This ensures that both divs take up equal width
+            margin: 0 10px;  // This gives a margin of 10px to the left and right of each div
+
+            label {
+                display: block;  // This ensures the label is above the input field
+                margin-bottom: 5px;  // Spacing between label and input field
+            }
+
+            input {
+                width: 100%;  // Input takes the full width of its container
+            }
+        }
+        div:first-child {
+            flex: 2;  // This ensures the first div can grow
+        }
+
+        div:last-child {
+            flex: 5;  // This ensures the second div will not grow
+        }
+    }
+    ::ng-deep .p-dropdown-panel {
+        max-height: 200px; /* Set a maximum height for the dropdown panel */
+        overflow-y: auto; /* Enable vertical scrolling if needed */
+      }
+      
+      
+    .auth-button {
+      margin-top: 20px;
+      width:90%
+    }
+
+
+}

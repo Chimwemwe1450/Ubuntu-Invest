@@ -1,0 +1,17 @@
+.custom-tabs {
+    margin-top: 65px;
+  font-size: 18px !important;
+}
+
+.custom-tabs ion-tab-button {
+  --color: #808080 ;
+  --color-selected: var(--primary-orange);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  --font-size: 12px !important;
+  --text-transform: uppercase;
+  }
+
+  .custom-tabs ion-tab-bar {
+    --background: #ffffff !important;
+  }

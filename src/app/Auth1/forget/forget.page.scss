@@ -1,0 +1,41 @@
+  .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 70%;
+
+    ion-content {
+      --background: #EAEAEA;
+    }
+
+    .bold-label {
+      font-weight: bold;
+    }
+    .forgot-password, .login-link {
+      color: var(--primary-orange);
+      text-align: right;
+      text-decoration: underline;
+      display: block;
+      width: 80%;
+      margin: 0 auto 15px auto;
+      font-family: Montserrat;
+      font-weight: bold;
+    }
+
+    .login-link {
+      text-align: center;
+    }
+
+    .paragraph {
+        color: black;
+        text-align: center;
+        display: block;
+        width: 80%;
+        margin: 0 auto 15px auto;
+        font-family: Montserrat;
+      }
+
+    }
+
+

@@ -1,0 +1,298 @@
+/* home.page.scss */
+
+ion-card {
+  background-color: var(--background-gray); // Light gray
+  --box-shadow: none;  // Ionic uses CSS variables, so this will remove the shadow
+    box-shadow: none;    // This is for additional assurance
+    .white-background {
+      --background: var(--white);  // This sets the background for ion-content
+    }
+    border-radius: 10px;
+
+  ion-card-content {
+      h2 {
+        color: var(--primary-orange); // Dark text color
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      p {
+          color: #777; // Lighter text color
+      }
+  }
+}
+
+.custom-tabs {
+  margin-top: 210px;
+  font-size: 18px !important;
+
+
+}
+.custom-tabs ion-tab-button {
+  --color: #808080 ;
+  --color-selected: var(--primary-orange);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  --font-size: 12px !important;
+  --text-transform: uppercase;
+}
+.custom-tabs ion-tab-bar {
+  --background: #ffffff !important;
+}
+
+
+.card-content-md {
+  padding: 5px !important;
+
+}
+.custom-fab1 {
+  --background: #1CB9C3;
+  --color: #FFFFFF;
+  margin-bottom: 50px;
+}
+.wallet-heading {
+  font-weight: 500;
+  color: #808080 !important;
+  font-size: 13px;
+  padding: 15px;
+  padding-bottom: 0;
+}
+
+.wallet-balance {
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 30px !important;
+  font-weight: 600 !important;
+}
+
+.auth-button1 {
+  --background: #1CB9C3;
+  --color: #FFFFFF;
+  width: 100%;
+  height: 28px;
+  font-size: 11px;
+  font-weight: 500;
+  font-family: "Montserrat";
+--box-shadow: none !important;
+--border-radius: 7px;
+}
+.auth-button2 {
+  --background: #1CB9C3;
+  --color: #FFFFFF;
+  height: 48px;
+}
+html, body, ion-content {
+  height: 100%;
+}
+ion-content .grey-background {
+  min-height: 100% !important;
+}
+.grey-background {
+  background-color: var(--background-gray);
+  height: 150%;      // This ensures it takes the full height
+  min-height: 150vh; // This ensures it takes at least the full viewport height
+  box-sizing: border-box;
+}
+.screen-padding {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+@media (max-width: 540px) {
+  .grey-background {
+      padding-top: 5px;
+      padding-bottom: 12;
+  // decrease the height by the padding amount
+  }
+}
+ion-segment {
+  overflow-y: auto;
+}
+
+ion-segment {
+  border: none;
+  --background: transparent;
+
+  ion-segment-button {
+    --color: var(--primary-orange) !important; // Non-active text color
+    --color-checked: var(--primary-orange) !important; // Active text color
+    --background-checked: white !important; // Background color for active state
+    font-size: 13px;
+    margin: 0 5px;
+    font-family: "Montserrat";
+  }
+}
+
+.ion-color-warning {
+  --ion-color-base: var(--primary-orange) !important;
+}
+
+.label {
+  color: #777;
+  font-family: "Montserrat";
+}
+
+.custom-list {
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  .custom-item {
+    --background: var(--background-gray); // Light gray background
+    --border-width: 0; // Remove default border
+    --padding-start: 16px; // Adjust padding if needed
+    --padding-end: 16px;
+    border-bottom: 1px solid #e0e0e0; // Add a light border at the bottom of each item
+  }
+
+  .custom-item:last-child {
+    border-bottom: none; // Remove border from the last item
+  }
+}
+
+.bigger-card {
+  width: 80px;       // Adjust the width as per your requirement
+  height: 30px;      // Adjust the height as per your requirement
+  padding: 2px;
+
+  display: flex;               // Use flexbox for layout
+  justify-content: center;    // Center content horizontally
+  align-items: center;   // Increase padding if needed
+}
+.custom-tabs {
+    margin-top: 65px; /* Adjust this value as needed */
+
+}
+.custom-tabs ion-tab-button {
+    --color: rgb(27, 27, 26);            /* Color for inactive tabs */
+    --color-selected: var(--primary-orange);   /* Color for the active tab */
+  }
+  .custom-tabs ion-tab-bar {
+    --background: #fdfbfb;  /* Example light gray background */
+  }
+.screen-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+
+  .edit-input-item {
+    padding-right: 20px;
+  }
+
+  ion-tab-bar {
+    background: var(--global-background);
+      border: none;
+  }
+
+
+
+  .custom-tabs {
+    margin-top: 65px; /* Adjust this value as needed */
+
+}
+.margin{
+  margin-bottom: 30px;
+}
+
+.example-modal {
+  --width: fit-content;
+  --min-width: 250px;
+  --height: fit-content;
+  --border-radius: 6px;
+  --box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
+}
+
+.example-modal h1 {
+  margin: 20px 20px 10px 20px;
+}
+
+.example-modal ion-icon {
+  margin-right: 6px;
+  width: 48px;
+  height: 48px;
+  padding: 4px 0;
+  color: #aaaaaa;
+}
+
+.example-modal .wrapper {
+  margin-bottom: 10px;
+}
+
+.deposit-button {
+  --background: transparent;     /* Set the background to transparent */
+  --border-color: var(--primary-blue);      /* Set the border color to white */
+  --border-width: 2px;          /* Set the border width */
+  --border-style: solid;        /* Set the border style */
+  --color: var(--primary-blue);             /* Text color */
+  width: 125px;
+  height: 28px;
+  margin-bottom: 1px;
+  font-size: 11px;
+  font-weight: 500;
+  font-family: "Montserrat";
+--box-shadow: none !important;
+--border-radius: 7px;
+  }
+
+    .block {
+      width: 100%;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .Nameblack{
+      margin-left: 5px;
+    }
+    ion-modal {
+      --height: auto;
+    }
+
+    .container2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .custom-dropdown .ui-dropdown {
+      width: 300px; /* set the width according to your requirement */
+    }
+    .container1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%; /* Or any other desired height */
+      width: 100%;
+     }
+
+    ion-modal#example-modal {
+      --width: fit-content;
+      --min-width: 250px;
+      --height: fit-content;
+      --border-radius: 6px;
+      --box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
+    }
+
+    ion-modal#example-modal h1 {
+      margin: 20px 20px 10px 20px;
+    }
+
+    ion-modal#example-modal ion-icon {
+      margin-right: 6px;
+
+      width: 58px;
+      height: 58px;
+
+      padding: 4px 0;
+
+      color: #aaaaaa;
+    }
+
+    ion-modal#example-modal .wrapper {
+      margin-bottom: 10px;
+    }
