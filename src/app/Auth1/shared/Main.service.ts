@@ -35,8 +35,8 @@ assetID: any;
   private userIdLogin: any;
   private completeUrl:any; 
   private payfastApiUrl = 'https://www.payfast.co.za/eng/process';
-  private payfastMerchantId = '17482145';
-  private payfastMerchantKey = 'zlriwfncgfewy';
+  private payfastMerchantId = '';
+  private payfastMerchantKey = '';// for merchant ID intergration 
   private ozowApiKey = '';
   private URL = 'https://pay.ozow.com/';
   constructor(
